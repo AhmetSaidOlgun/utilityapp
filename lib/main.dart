@@ -1,8 +1,9 @@
-// ignore: avoid_web_libraries_in_flutter
-
-
+// ignore: non_constant_identifier_names
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:utilityapp/Components/horizontal_listview.dart';
+import 'package:utilityapp/Components/Products.dart';
+
 
 void main(){
   runApp(
@@ -20,7 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-  Widget image_carousel = new Container(
+  Widget Image_carousel = new Container(
     height: 200.0,
     child: Carousel(
       boxFit: BoxFit.cover,
@@ -43,12 +44,12 @@ class _HomePageState extends State<HomePage> {
 
       appBar: new AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.green,
 
-        title: Text('Utility Appearel', style: TextStyle(color: Colors.black)),
+        title: Text('Utility Appearel', style: TextStyle(color: Colors.white)),
         actions: [
-          new IconButton(icon: Icon(Icons.search, color: Colors.black,), onPressed: (){}),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.black,), onPressed: (){})
+          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){}),
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: (){})
         ],
       ),
       drawer: new Drawer(
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             new UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
-                color: Colors.blueGrey),
+                color: Colors.green),
               accountName: Text('Ahmet Said Olgun'),
               accountEmail: Text('aolgun98@gmail.com'),
             currentAccountPicture: GestureDetector(
@@ -128,7 +129,19 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: [
-          image_carousel
+          Image_carousel,
+          new Padding(padding: const EdgeInsets.all(8.0),
+          child: Text('Categories'),),
+
+          HorizontalList(),
+
+          new Padding(padding: const EdgeInsets.all(20.0),
+            child: Text('RecentProduct'),),
+
+          Container(
+            height: 320.0,
+            child: Products(),
+          )
         ],
       ),
     );
