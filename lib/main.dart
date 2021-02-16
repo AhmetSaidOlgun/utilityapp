@@ -45,7 +45,14 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
         elevation: 0.0,
         backgroundColor: Colors.green,
-
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('UtilityImages/iconofutılıty.png'),
+              fit: BoxFit.contain
+            )
+          ),
+        ),
         title: Text('Utility Appearel', style: TextStyle(color: Colors.white)),
         actions: [
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){}),
@@ -130,13 +137,12 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           Image_carousel,
-          new Padding(padding: const EdgeInsets.all(8.0),
-          child: Text('Categories'),),
+          new Padding(padding: const EdgeInsets.all(3.0),
+          child: Text('Categories', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: Colors.black38)),),
 
           HorizontalList(),
-
-          new Padding(padding: const EdgeInsets.all(20.0),
-            child: Text('RecentProduct'),),
+          new Padding(padding: const EdgeInsets.only(top:0),
+            child: Text('RecentProducts', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: Colors.black38)),),
 
           Container(
             height: 320.0,
