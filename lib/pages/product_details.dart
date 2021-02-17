@@ -50,21 +50,97 @@ class _ProductDetailsState extends State<ProductDetails> {
               footer: new Container(
                 color: Colors.white,
                 child: ListTile(
-                    leading: new Text (widget.product_detail_name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
+                    leading: new Text (widget.product_detail_name,
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
 
                   title: new Row(
                     children: [
                       Expanded(
-                        child: new Text("${widget.product_detail_old_price}"),
+                        child: new Text("\$${widget.product_detail_old_price}",
+                        style: TextStyle(color: Colors.blueGrey,
+                            decoration: TextDecoration.lineThrough),),
                       ),
                       Expanded(
-                        child: new Text("${widget.product_detail_new_price}"),
+                        child: new Text("\$${widget.product_detail_new_price}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),),
                       )
                     ],
                   ),
               ),
             ),
-          ))
+          ),
+          ),
+
+
+          // =====================First Button =======================
+
+          Row(
+            children: [
+              //=====================   SizeButton
+              Expanded(child: MaterialButton(onPressed: (){},
+              color: Colors.white,
+              textColor: Colors.grey,
+              elevation: 0.3,
+                child: Row(
+                children: [
+                  Expanded(child:
+                  Text('Size'),),
+                  Expanded(child:
+                  Icon(Icons.arrow_drop_down_outlined)),
+
+                ],
+              ),
+              ),
+              ),
+              //=====================   SizeButton
+              Expanded(child: MaterialButton(onPressed: (){},
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.3,
+                child: Row(
+                  children: [
+                    Expanded(child:
+                    Text('Color'),),
+                    Expanded(child:
+                    Icon(Icons.arrow_drop_down_outlined)),
+
+                  ],
+                ),
+              ),
+              ),
+              //=====================   SizeButton
+              Expanded(child: MaterialButton(onPressed: (){},
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.3,
+                child: Row(
+                  children: [
+                    Expanded(child:
+                    Text('Qty'),),
+                    Expanded(child:
+                    Icon(Icons.arrow_drop_down_outlined)),
+
+                  ],
+                ),
+              ),
+              ),
+            ],
+          ),
+          // =====================Second Button =======================
+
+          Row(
+            children: [
+              //=====================   SizeButton
+              Expanded(child: MaterialButton(onPressed: (){},
+                color: Colors.red,
+                textColor: Colors.white,
+                elevation: 0.3,
+                child: new Text('Buy now')
+              ),
+              ),
+                new IconButton(icon: Icon(Icons.add_shopping_cart, color: Colors.red,), onPressed: (){}),
+                new IconButton(icon: Icon(Icons.favorite_border, color: Colors.red,), onPressed: (){}),
+            ],
+          ),
         ],
       ),
     );
