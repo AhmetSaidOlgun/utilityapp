@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -76,7 +77,20 @@ class _ProductDetailsState extends State<ProductDetails> {
           Row(
             children: [
               //=====================   SizeButton
-              Expanded(child: MaterialButton(onPressed: (){},
+              Expanded(child: MaterialButton(onPressed: (){
+                showDialog(context: context, builder: (context){
+                  return new AlertDialog(
+                    title: Text('Size'),
+                    content: Text('Choose the size'),
+                    actions: [
+                      MaterialButton(onPressed:(){
+                        Navigator.of(context).pop(context);
+                      },
+                      child: new Text('Close', style: TextStyle(color: Colors.blue),),)
+                    ],
+                  );
+                });
+              },
               color: Colors.white,
               textColor: Colors.grey,
               elevation: 0.3,
@@ -91,8 +105,21 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               ),
               ),
-              //=====================   SizeButton
-              Expanded(child: MaterialButton(onPressed: (){},
+              //=====================   ColorButton
+              Expanded(child: MaterialButton(onPressed: (){
+                showDialog(context: context, builder: (context){
+                  return new AlertDialog(
+                    title: Text('Color'),
+                    content: Text('Choose the color'),
+                    actions: [
+                      MaterialButton(onPressed:(){
+                        Navigator.of(context).pop(context);
+                      },
+                        child: new Text('Close', style: TextStyle(color: Colors.blue),),)
+                    ],
+                  );
+                });
+              },
                 color: Colors.white,
                 textColor: Colors.grey,
                 elevation: 0.3,
@@ -107,8 +134,21 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
               ),
               ),
-              //=====================   SizeButton
-              Expanded(child: MaterialButton(onPressed: (){},
+              //=====================   QuantityButton
+              Expanded(child: MaterialButton(onPressed: (){
+                showDialog(context: context, builder: (context){
+                  return new AlertDialog(
+                    title: Text('Quantity'),
+                    content: Text('Choose the quantity'),
+                    actions: [
+                      MaterialButton(onPressed:(){
+                        Navigator.of(context).pop(context);
+                      },
+                        child: new Text('Close', style: TextStyle(color: Colors.blue),),)
+                    ],
+                  );
+                });
+              },
                 color: Colors.white,
                 textColor: Colors.grey,
                 elevation: 0.3,
@@ -139,6 +179,36 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
                 new IconButton(icon: Icon(Icons.add_shopping_cart, color: Colors.red,), onPressed: (){}),
                 new IconButton(icon: Icon(Icons.favorite_border, color: Colors.red,), onPressed: (){}),
+            ],
+          ),
+          Divider(),
+          new ListTile(
+            title: new Text('Product Details'),
+            subtitle: new Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
+          ),
+          Divider(),
+          new Row(
+            children: [
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+              child: new Text('Product name', style: TextStyle(color: Colors.grey),),),
+              Padding(padding: EdgeInsets.all(5.0),
+               child: new Text(widget.product_detail_name),)
+            ],
+          ),
+          new Row(
+            children: [
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: new Text('Product brand', style: TextStyle(color: Colors.grey),),),
+              Padding(padding: EdgeInsets.all(5.0),
+              child: new Text('Utility'),
+              )
+            ],
+          ),
+          new Row(
+            children: [
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: new Text('Product condition', style: TextStyle(color: Colors.grey),),),
+              Padding(padding: EdgeInsets.all(5.0),child: new Text('Available'),)
             ],
           ),
         ],
