@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:utilityapp/Components/horizontal_listview.dart';
 import 'package:utilityapp/Components/Products.dart';
 import 'package:utilityapp/pages/Cart.dart';
+import 'package:utilityapp/pages/Login.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -134,6 +135,15 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   title: Text('Settings'),
                   leading: Icon(Icons.settings, color: Colors.black),
+                ),
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>new Login()));
+                },
+                child: ListTile(
+                  title: Text('Sign Out'),
+                  leading: Icon(Icons.exit_to_app, color: Colors.black),
                 ),
               ),
             ],

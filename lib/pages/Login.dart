@@ -36,11 +36,7 @@ class _LoginState extends State<Login> {
     ),
     ),
     title: InkWell(
-    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> new HomePage()));},
     child: Text('Utility Appearel', style: TextStyle(color: Colors.white) )),
-    actions: [
-    new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){})
-    ],
     ),
       body: Column(
         children: [
