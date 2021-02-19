@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "466571786137",
-    "project_id": "utilityapp-22909",
-    "storage_bucket": "utilityapp-22909.appspot.com"
+    "project_number": "133267682539",
+    "project_id": "utilityapp-e205a",
+    "storage_bucket": "utilityapp-e205a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:466571786137:android:26417bc6fbba32c3f8c508",
+        "mobilesdk_app_id": "1:133267682539:android:167b531d1819e2746dfaae",
         "android_client_info": {
           "package_name": "ahmetolgun.utilityapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "466571786137-gd1gd3q6rrsr8v0teg2kch9c73dirnpe.apps.googleusercontent.com",
+          "client_id": "133267682539-3n5op0g7okvi14bg9nqt8koo36b8loi0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "ahmetolgun.utilityapp",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "466571786137-uobt6qjvohqo23ds7smqvpblhnk68tui.apps.googleusercontent.com",
+          "client_id": "133267682539-lpgbo1h76i2514itkl696e695fbk0ido.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBRmqYk4KjvImoljd-nwDn8fhJYjCItIMA"
+          "current_key": "AIzaSyCNucd4Qi1IO6XlQHFuiYGgniwrIm62B7w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "466571786137-uobt6qjvohqo23ds7smqvpblhnk68tui.apps.googleusercontent.com",
+              "client_id": "133267682539-lpgbo1h76i2514itkl696e695fbk0ido.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
